@@ -17,8 +17,8 @@ def parse_logs(file_path):
     """
     Lee el archivo de logs y retorna las líneas del archivo.
     
-    :param file_path: Ruta del archivo de logs
-    :return: Lista de líneas del archivo
+    param file_path: Ruta del archivo de logs
+    return: Lista de líneas del archivo
     """
     with open(file_path, 'r') as file:
         logs = file.readlines()
@@ -28,8 +28,8 @@ def analyze_logs(logs):
     """
     Analiza las líneas de log para extraer actividad por IP, intentos fallidos y accesos críticos.
     
-    :param logs: Lista de líneas del archivo de logs
-    :return: Tupla con actividad por IP, intentos fallidos, y accesos a rutas críticas
+    param logs: Lista de líneas del archivo de logs
+    return: Tupla con actividad por IP, intentos fallidos, y accesos a rutas críticas
     """
     ip_activity = defaultdict(list)  # Diccionario para almacenar actividad por IP
     failed_logins = defaultdict(int)  # Diccionario para contar intentos fallidos por IP
